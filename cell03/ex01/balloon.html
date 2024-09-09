@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="circle" >
+    </div>
+    <script>
+        const circle = document.querySelector(".circle");
+        let currentColorIndex = 0;
+        let size = 200;
+        const colors = ['red', 'green', 'blue'];
+        circle.addEventListener("click", function () {
+            if (size <= 420) {
+                size += 10;
+                circle.style.width = size + 'px';
+                circle.style.height = size + 'px';
+                currentColorIndex = (currentColorIndex + 1) % colors.length;
+                circle.style.backgroundColor = colors[currentColorIndex];
+            }
+            else {
+                circle.style.width = 200 + 'px';
+                circle.style.height = 200 + 'px';
+                currentColorIndex = 0;
+                circle.style.backgroundColor = colors[currentColorIndex];
+                size = 200;
+            }
+        })
+        circle.addEventListener("mouseover", function () {
+            if (size > 200) {
+                size += 5;
+                circle.style.width = size + 'px';
+                circle.style.height = size + 'px';
+                currentColorIndex = (currentColorIndex+1) % colors.length;
+                circle.style.backgroundColor = colors[currentColorIndex];
+            }
+        })
+        circle.addEventListener("mouseout", function () {
+            if (size > 200) {
+                size -= 5;
+                circle.style.width = size + 'px';
+                circle.style.height = size + 'px';
+                currentColorIndex = (currentColorIndex-1) % colors.length;
+                circle.style.backgroundColor = colors[currentColorIndex];
+            }
+        })
+    </script>
+
+</body>
+
+</html>
