@@ -1,0 +1,8 @@
+body{
+    display: flex;
+    justify-content: left;
+}
+button{
+    width: 5rem;
+    height: 2rem;
+}
