@@ -1,0 +1,25 @@
+.menu-container {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #dfe6e9;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+select:hover {
+    background-color: #dfe6e9;
+}
