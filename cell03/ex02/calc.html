@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        // Function to handle the calculation and validation
+        function calculate() {
+            const leftValue = document.getElementById('left').value;
+            const operator = document.getElementById('operator').value;
+            const rightValue = document.getElementById('right').value;
+
+            // Convert inputs to numbers
+            const leftNum = parseInt(leftValue, 10);
+            const rightNum = parseInt(rightValue, 10);
+
+            // Validate that both inputs are positive integers
+            if (isNaN(leftNum) || isNaN(rightNum) || leftNum < 0 || rightNum < 0) {
+                alert('Error :(');
+                // console.log('Error :(');
+                return;
+            }
+
+            let result;
+
+            // Perform the calculation based on the operator
+            switch (operator) {
+                case '+':
+                    result = leftNum + rightNum;
+                    break;
+                case '-':
+                    result = leftNum - rightNum;
+                    break;
+                case '*':
+                    result = leftNum * rightNum;
+                    break;
+                case '/':
+                    if (rightNum == 0) {
+                        alert("It's over 9000!");
+                        // console.log("It's over 9000!");
+                        return;
+                    }
+                    result = leftNum / rightNum;
+                    break;
+                case '%':
+                    if (rightNum == 0) {
+                        alert("It's over 9000!");
+                        // console.log("It's over 9000!");
+                        return;
+                    }
+                    result = leftNum % rightNum;
+                    break;
+                default:
+                    alert('Error :(');
+                    console.log('Error :(');
+                    return;
+            }
+
+            // Display the result
+            alert('Result: ' + result);
+            console.log('Result: ' + result);
+        }
+
+        // Function to show the "Please, use me..." message every 30 seconds
+        function remindUser() {
+            setInterval(() => {
+                alert('Please, use me...');
+            }, 30000); // 30000 milliseconds = 30 seconds
+        }
+
+        // Start the reminder when the page loads
+        window.onload = remindUser;
+    </script>
+</head>
+<body>
+    <!-- Left member input field -->
+    <input type="text" id="left" placeholder="Enter left number">
+
+    <!-- Operator select field -->
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+
+    <!-- Right member input field -->
+    <input type="text" id="right" placeholder="Enter right number">
+
+    <!-- Submit button -->
+    <input type="submit" value="Try me!" onclick="calculate()">
+
+</body>
+</html>
