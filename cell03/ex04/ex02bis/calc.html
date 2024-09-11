@@ -11,9 +11,9 @@
         $(document).ready(function () {
 
             $('.calculate').on('click', function () {
-                const leftValue = $('#left').val();
+                const leftValue = /^\d+$/.test($('#left').val());
                 const operator = $('#operator').val();
-                const rightValue = $('#right').val();
+                const rightValue = /^\d+$/.test($('#right').val());
 
                 const leftNum = parseInt(leftValue, 10);
                 const rightNum = parseInt(rightValue, 10);
