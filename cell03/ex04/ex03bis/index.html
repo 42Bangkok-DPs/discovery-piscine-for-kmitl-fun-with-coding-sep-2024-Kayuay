@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>Task Management</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
         body {
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
         }
-        #ft_list {
-            margin: 20px;
+
+        .ft_list {
             padding: 10px;
-            /* border: 1px solid #000; */
-            height: auto;
-            width: 300px;
-            background-color: #fff;
+            max-width: 300px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 5px;
         }
-        .todo-item {
-            background-color: #fff;
+
+        .new_button {
             padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
+            margin-top: 10px;
+            border: 0;
+            color: white;
+            background-color: #acacac;
+            border-radius: 5px;
             cursor: pointer;
         }
-        button {
-            margin: 20px;
-            padding: 10px;
-        }
     </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="todo.js"></script>
 </head>
+
 <body>
-
-    <button onclick="newTodo()">New</button>
-
-    <div id="ft_list"></div>
+    <div class="ft_list">
+    </div>
+    
+    <button class="new_button" id="newButton">New</button>
 
 </body>
+
 </html>
