@@ -1,6 +1,5 @@
-
 function New_note() {
-  console.log("PROCESS START by get click");
+  console.log("PROCESS START");
   const enter_note = prompt("Enter your new note : ");
   console.log("enter note success : " + enter_note);
 
@@ -11,66 +10,43 @@ function New_note() {
 }
 
 function Add_note(enter_note) {
-  const ft_List = document.querySelector(".ft_list");
   console.log("Add_note(enter_note) -----------");
-  console.log(ft_List);
 
-  const create_div = document.createElement("div");
-  console.log(create_div);
-
-  create_div.className = "todo";
-  create_div.innerText = enter_note;
-
-  console.log("className = " + create_div.className);
-  console.log("innerText = " + create_div.innerText);
-
-
-  ft_List.insertBefore(create_div, ft_List.firstChild);
-  console.log(ft_List.insertBefore(create_div, ft_List.firstChild));
-
-
-  create_div.addEventListener("click", function () {
-      const confirm_delete = confirm(
-          "yes or no you want to remove that TO DO?"
-      );
-      if (confirm_delete) {
-          ft_List.removeChild(create_div);
-          console.log("Remove success");
-          alert("Remove successful");
-          // save to cookie
-          save_cookie();
+  const $create_div = $('<div></div>', {
+      text: enter_note,
+      class: 'todo',
+      click: function () {
+          const confirm_delete = confirm("Do you want to remove this TO DO?");
+          if (confirm_delete) {
+              $(this).remove();
+              console.log("Remove success");
+              save_cookie();
+          }
       }
   });
+
+  $('.ft_list').prepend($create_div);
 }
 
 function save_cookie() {
-  // Get all 
-  const ft_List = document.querySelector(".ft_list");
-  console.log("save_cookie() -----------");
-  console.log(ft_List);
-
-  // Convert to array and keep to cookie
-  const map_ft = Array.from(ft_List.children).map((todo) => todo.innerText);
-  console.log("map_ft : " + map_ft);
+  const map_ft = $('.ft_list .todo').map(function () {
+      return $(this).text();
+  }).get();
 
   document.cookie = "cookie_name=" + JSON.stringify(map_ft);
-  console.log("document.cookie : " + (document.cookie = "cookie_name=" + JSON.stringify(map_ft)));
+  console.log("document.cookie : " + document.cookie);
 }
 
 function get_cookie() {
-  const cookieValue = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("cookie_name="));
-  console.log("cookieValue : " + cookieValue);
-
+  const cookieValue = document.cookie.split('; ').find(row => row.startsWith('cookie_name='));
   if (cookieValue) {
-      // Parse the cookie value and add each to the list
-      const tasks = JSON.parse(cookieValue.split("=")[1]);
-      tasks.reverse().forEach((task) => {
+      const tasks = JSON.parse(cookieValue.split('=')[1]);
+      tasks.reverse().forEach(function (task) {
           Add_note(task);
       });
   }
 }
+
 
 $(document).ready(function () {
   get_cookie();
