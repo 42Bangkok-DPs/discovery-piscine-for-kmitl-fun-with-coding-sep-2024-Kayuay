@@ -1,0 +1,146 @@
+.card {
+    text-align: center;
+    transition: 0.3s;
+    position: relative;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+#right{
+    margin-left: 30px;
+}
+
+#left{
+    margin-right: 30px;
+}
+
+.gray-image {
+    filter: grayscale(70%);
+  }
+
+.shadow1{
+    position: absolute;
+    display: flex;
+    right: -340px;
+    top: -220px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.shadow2{
+    position: absolute;
+    display: flex;
+    right: 130px;
+    top: -220px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.shadow3{
+    position: absolute;
+    display: flex;
+    right: -95px;
+    top: -260px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.3);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.center {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+}
+
+.table {
+    width: 100%;
+    flex: 1;
+    outline: none;
+    text-align: center;
+    font-family: monospace;
+    border-collapse: collapse;
+    top: 50px;
+}
+
+.link {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    align-items: center;
+}
+
+.button button {
+    background-color: #000;
+    color: white;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 0%;
+    border-radius: 0 0 5px 5px;
+}
+.font{
+    font-family: 'NoGameNoLifeFont', sans-serif; 
+    font-size: 93px;
+    color: #ffffff;
+    -webkit-text-stroke: 3.5px #ff99cc;
+}
+
+a:link {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+a:visited {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+a:active {
+    text-decoration: none;
+    opacity: 1;
+}
+
+body{
+    background-color: #111111;
+}
+
+@font-face {
+    font-family: 'NoGameNoLifeFont';
+    src: url('no_game_no_life_logo_font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+/*
+
+ชมพู (Pink/Magenta): โทนสีหลักที่ใช้มากที่สุดในตัวละครและพื้นหลัง
+Hex: #ff66cc หรือ #ff99cc
+
+ม่วง (Purple): ผสมผสานกับสีชมพู ทำให้เกิดเฉดสีม่วงในหลายส่วน
+Hex: #9933ff หรือ #cc33ff
+
+ฟ้า/น้ำเงิน (Blue): สีฟ้าสดใสในพื้นหลังและองค์ประกอบอื่นๆ
+Hex: #00ccff หรือ #3399ff
+
+เหลือง (Yellow): สีเหลืองสดใสในบางส่วนของภาพ เช่น ปีกของตัวละคร
+Hex: #ffcc00 หรือ #ffdd55
+
+ขาว (White): สีขาวใช้เป็นพื้นหลังและการไฮไลท์บางส่วน
+Hex: #ffffff
+
+*/
