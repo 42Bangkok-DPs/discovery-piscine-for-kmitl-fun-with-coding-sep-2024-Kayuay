@@ -1,0 +1,241 @@
+body{
+    background-color: #111111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+.img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    margin: 0; 
+}
+
+.img_edit{
+    width: 400px; 
+    height: 500px; 
+    border-bottom-left-radius: 25px ; 
+    border-bottom-right-radius: 25px;
+}
+
+@media screen and (max-width: 992px) {
+    .img_edit{
+      width: 40%;
+      height: 40%;
+      float: right;
+    }
+  }
+
+.img3{
+    display: flex;
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+}
+
+.first{
+    height: 80vh;
+}
+
+.second{
+    height: 80vh;
+}
+
+.third{
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.card{
+    background-color: #1b1b1b;
+    color: #fff;
+    transition: 0.3s;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 10%;    
+    margin-left: 15%;
+    margin-right: 40%;
+
+
+}
+
+.card1{
+    background-color: #1b1b1b;
+    transition: 0.3s;
+    position: relative;
+    border-radius: 15px;
+    color: #fff;
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
+
+.card2{
+    background-color: #1b1b1b;
+    display: flex;
+    flex-direction: row-reverse;
+    transition: 0.3s;
+    position: relative;
+    border-radius: 15px;
+    color: #fff;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 10%;
+}
+
+.card3{
+    transition: 0.3s;
+    position: relative;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 30%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.call{
+    background-color: #1b1b1b;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.call:hover{
+    box-shadow: 0 0 20px 0 #00ccff;
+}
+
+.intro{
+    border-radius: 10px;
+    padding: 80px;
+}
+
+.intro1{
+    
+    padding: 40px;
+}
+.intro2{
+    padding: 40px;
+}
+
+
+.space{
+    padding: 5px;
+}
+
+.space3{
+    padding: 3px;
+}
+
+.space2{
+    padding: 1.5px;
+}
+
+.spaceside{
+    padding-left: 7px;
+}
+
+.margin-right{
+    margin-right: 3.2%;
+}
+
+.margin-right2{
+    margin-right: 25%;
+}
+
+.shift{
+    padding-left: 10px;
+}
+
+#color{
+    color: #ffffff;
+    -webkit-text-stroke: 1px #ff99cc;
+}
+
+.navigation_bar{
+    display: flex;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 50px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.597);
+    
+}
+.navigation_bar a{
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+.navigation_bar a:hover{
+    transform: scale(1.5);
+}
+.navigation_bar:hover a{
+    transform: scale(0.75);
+}
+.navigation_bar:hover a:hover{
+    transform: scale(1.5);
+}
+.navigation_bar img{
+    width: 48px;
+    height: 48px;
+}
+body .navigation_bar{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 10vh;
+    margin-left: 15px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #fff ;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #fff ;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff ;
+}
+
+a:active {
+    text-decoration: none;
+    color: #fff ;
+}
+.font{
+    font-family: 'NoGameNoLifeFont', sans-serif; 
+    font-size: 60px;
+    color: #ffffff;
+    -webkit-text-stroke: 0.3px #ff99cc;
+}
+
+@font-face {
+    font-family: 'NoGameNoLifeFont';
+    src: url('no_game_no_life_logo_font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
